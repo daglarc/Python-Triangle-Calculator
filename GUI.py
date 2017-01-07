@@ -40,22 +40,10 @@ greeting_label.grid(row=0, column=0, padx=10, pady=10, sticky="NSEW")
 middle_frame = ttk.LabelFrame(root, text="OPTIONS")
 middle_frame.grid(row=1, column=1, padx=10, pady=10, sticky="NSEW")
 
-#Create Label to describe the Combobox
-description_label = ttk.Label(middle_frame, text="Which length do you want to calculate?:")
-description_label.grid(row=0, column=1, padx=10, pady=10, sticky="NSEW")
-
-#Create Combo Box
-options = ["Side", "Hypotenuse"]
-options_var = StringVar()
-options_var.set(options[0])
-
-options_combobox = ttk.Combobox(middle_frame, textvariable=options_var, state="readonly")
-options_combobox["values"]=options
-options_combobox.grid(row=1, column=1, padx=10, pady=10, sticky="NSEW")
 
 #Create label to give instructions
 entry_help_label = ttk.Label(middle_frame, text="Enter the length of the known sides, enter '0' for the unknown length")
-entry_help_label.grid(row=2, column=1, padx=10, pady=10)
+entry_help_label.grid(row=1, column=1, padx=10, pady=10)
 
 
 # Create a label for the hypotenuse field and pack it into the GUI
@@ -64,7 +52,7 @@ hypotenuse_entry_label.grid(row=3, column=0, padx=10, pady=10)
 
 
 #Create a variable to store hypotenuse
-hypotenuse_value =IntVar()
+hypotenuse_value =DoubleVar()
 
 
 #Create Entry for the hypotenuse
@@ -77,7 +65,7 @@ side1_entry_label.grid(row=4, column=0, padx=10, pady=10)
 
 
 #Create a variable to store side1
-side1_value =IntVar()
+side1_value =DoubleVar()
 
 #Create Entry for the side1
 side1_entry = ttk.Entry(middle_frame, textvariable=side1_value)
@@ -89,7 +77,7 @@ side2_entry_label.grid(row=5, column=0, padx=10, pady=10)
 
 
 #Create a variable to store side2
-side2_value = IntVar()
+side2_value = DoubleVar()
 
 
 #Create Entry for the side2
